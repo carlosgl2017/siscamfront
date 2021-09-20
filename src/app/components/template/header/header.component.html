@@ -1,0 +1,24 @@
+<mat-toolbar class="header mat-elevation-z8" color="primary">
+    <span>
+        <img src="assets/img/bull.png" alt="">
+    </span>
+    <span>
+        <h1>Sistema de Rotación de Discos </h1>
+    </span>
+    
+    <span class="example-spacer"></span>
+    
+      <div *ngIf="!authService.isAuthenticated()">
+        <button routerLink="login" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon>login</mat-icon>
+        </button>
+      </div>
+      <div *ngIf="authService.isAuthenticated()">
+        {{authService.usuario.username}}
+        <button (click)="logout()" mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+          <mat-icon>logout</mat-icon>
+        </button>
+
+      </div>
+      
+</mat-toolbar>
