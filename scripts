@@ -1,0 +1,15 @@
+#componente home
+ng g c components/views/home/home
+#adding angular material
+ng add @angular/material
+#install sweet alert2
+npm install --save sweetalert2
+#desabilitar stric tscript
+tsconfig.json
+
+#dvr
+//compras
+ng g c components/views/dvr/add-edit-dvr
+ng g c components/views/dvr/list-dvr
+ng g s components/views/dvr/dvr
+ng g i components/views/dvr/dvr
