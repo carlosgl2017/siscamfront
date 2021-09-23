@@ -19,7 +19,7 @@ export class DvrService {
   }
 
   create(dvr: Dvr): Observable<Dvr> {
-    const url = `${this.baseUrl}/cat/add`;
+    const url = `${this.baseUrl}/dvr/add`;
     return this.http.post<Dvr>(url, dvr);
   }
 

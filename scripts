@@ -8,8 +8,26 @@ npm install --save sweetalert2
 tsconfig.json
 
 #dvr
-//compras
 ng g c components/views/dvr/add-edit-dvr
 ng g c components/views/dvr/list-dvr
 ng g s components/views/dvr/dvr
 ng g i components/views/dvr/dvr
+
+#dvr
+ng g c components/views/disco/add-edit-disco
+ng g c components/views/disco/list-disco
+ng g s components/views/disco/disco
+ng g i components/views/disco/disco
+
+#rotacion
+ng g c components/views/rotacion/add-edit-rotacion
+ng g c components/views/rotacion/list-rotacion
+ng g s components/views/rotacion/rotacion
+ng g i components/views/rotacion/rotacion
+
+
+#rotacion
+ng g c components/views/oficina/add-edit-oficina
+ng g c components/views/oficina/list-oficina
+ng g s components/views/oficina/oficina
+ng g i components/views/oficina/oficina

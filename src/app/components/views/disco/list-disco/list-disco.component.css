@@ -1,0 +1,32 @@
+
+.disco{
+    width: 95%; 
+    margin:1rem;
+  }
+  @media(max-width:450px){
+   .disco{
+       width: 70%;
+   }
+  }
+  
+  @media(max-width:760px){
+     .disco{
+         width:90%;
+     }
+  }
+  
+  table {
+     width: 100%;   
+    }
+    .mat-form-field {
+      font-size: 14px;
+      width: 100%;
+    }
+    .content {
+      width: 90%;
+      margin: 1.4rem auto auto auto;
+  }
+  .pointer{
+    cursor:pointer;
+  }
+    

@@ -1,0 +1,85 @@
+<mat-card class="disco mat-elevation-z4">
+    <mat-card-title class="title">Gestión de Discos Duros</mat-card-title>
+  
+    <div class="button-row"> 
+        <div class="example-button-container">
+          <button  matTooltip="Añadir Disco" (click)="navegarParaDiscoCreate()" mat-mini-fab color="warn" aria-label="Example icon button with a plus one icon">
+            <mat-icon>add</mat-icon>
+          </button>
+        </div>  
+    </div>
+  
+    <mat-form-field>
+      <mat-label>Buscar</mat-label>
+      <input
+        matInput
+        (keyup)="applyFilter($event)"
+        placeholder="Buscar"
+        #input
+        autocomplete="off"
+      />
+    </mat-form-field>
+  
+    <table
+      mat-table
+      [dataSource]="dataSource"
+      class="mat-elevation-z8"
+      matSort
+      matSort
+      matSortActive="iddisco"
+      matSortDirection="asc"
+    >
+      <!-- Position Column -->
+      <ng-container matColumnDef="iddisco">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header>Id</th>
+        <td mat-cell *matCellDef="let element">{{ element.iddisco }}</td>
+      </ng-container>
+  
+      <!-- Name Column -->
+      <ng-container matColumnDef="capacidad">
+        <th mat-header-cell *matHeaderCellDef>Capacidad</th>
+        <td mat-cell *matCellDef="let element">{{ element.capacidad }}</td>
+      </ng-container>
+  
+      <!-- Weight Column -->
+      <ng-container matColumnDef="codigoactivo">
+        <th mat-header-cell *matHeaderCellDef>Código Activo</th>
+        <td mat-cell *matCellDef="let element">{{ element.codigoactivo }}</td>
+      </ng-container>  
+
+      <!-- Weight Column -->
+      <ng-container matColumnDef="descripcion">
+        <th mat-header-cell *matHeaderCellDef>Descripción</th>
+        <td mat-cell *matCellDef="let element">{{ element.descripcion }}</td>
+      </ng-container>  
+
+       
+  
+      <!-- Symbol Column -->
+      <ng-container matColumnDef="acciones">
+        <th class="mat-header" mat-header-cell *matHeaderCellDef>ACCIONES</th>
+        <td mat-cell *matCellDef="let row">
+          <a
+            class="pointer"
+            routerLink="update/{{ row.iddisco }}"
+            style="color: #187880"
+          >
+            <i class="material-icons">edit</i>
+          </a>
+  
+          <a class="pointer" (click)="delete(row.iddisco)" style="color: #e15639">
+            <i class="material-icons">delete</i>
+          </a>
+        </td>
+      </ng-container>
+  
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+  
+    <mat-paginator
+      [pageSizeOptions]="[5, 10, 20]"
+      showFirstLastButtons
+    ></mat-paginator>
+  </mat-card>
+  

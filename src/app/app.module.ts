@@ -38,6 +38,12 @@ import { LoginComponent } from './components/views/login/login.component';
 import { AddEditDvrComponent } from './components/views/dvr/add-edit-dvr/add-edit-dvr.component';
 import { ListDvrComponent } from './components/views/dvr/list-dvr/list-dvr.component';
 import { MensajeConfirmacionComponent } from './components/shared/mensaje-confirmacion/mensaje-confirmacion.component';
+import { AddEditDiscoComponent } from './components/views/disco/add-edit-disco/add-edit-disco.component';
+import { ListDiscoComponent } from './components/views/disco/list-disco/list-disco.component';
+import { AddEditRotacionComponent } from './components/views/rotacion/add-edit-rotacion/add-edit-rotacion.component';
+import { ListRotacionComponent } from './components/views/rotacion/list-rotacion/list-rotacion.component';
+import { AddEditOficinaComponent } from './components/views/oficina/add-edit-oficina/add-edit-oficina.component';
+import { ListOficinaComponent } from './components/views/oficina/list-oficina/list-oficina.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +55,13 @@ import { MensajeConfirmacionComponent } from './components/shared/mensaje-confir
     LoginComponent,
     AddEditDvrComponent,
     ListDvrComponent,
-    MensajeConfirmacionComponent
+    MensajeConfirmacionComponent,
+    AddEditDiscoComponent,
+    ListDiscoComponent,
+    AddEditRotacionComponent,
+    ListRotacionComponent,
+    AddEditOficinaComponent,
+    ListOficinaComponent
   ],
   imports: [
     BrowserModule,
